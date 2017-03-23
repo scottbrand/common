@@ -1,0 +1,5 @@
+-buildpath: \
+	osgi-compile,\
+	io.github.scottbrand.common;version=latest
+-sub: *.bnd
+Bundle-Version: 0.0.1.${tstamp}

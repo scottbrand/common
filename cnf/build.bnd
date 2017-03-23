@@ -1,0 +1,16 @@
+javac.source: 			1.8
+javac.target: 			1.8
+
+
+
+# Configure Repositories
+
+       
+-plugin: \
+	aQute.lib.deployer.FileRepo;readonly=true;name=Libs;location=${workspace}/cnf/libs,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=felix;locations=file:///home/scott/repos/felix/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-osgi;locations=file:///home/scott/repos/base-osgi/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-depends;locations=file:///home/scott/repos/base-depends/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=webservices;locations=file:///home/scott/repos/webservices/index.xml.gz
+	
+	

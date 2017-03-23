@@ -1,0 +1,3 @@
+Bundle-Version: 0.0.1.${tstamp}
+Private-Package: io.github.scottbrand.webservice.jaxrs.publisher.provider
+Export-Package: io.github.scottbrand.webservice.jaxrs.publisher

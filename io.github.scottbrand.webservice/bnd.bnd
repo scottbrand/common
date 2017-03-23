@@ -1,0 +1,6 @@
+Bundle-Version: 0.0.1.${tstamp}
+-buildpath: \
+	osgi-compile,\
+	jersey-ws,\
+	io.github.scottbrand.common;version=latest
+-sub: *.bnd

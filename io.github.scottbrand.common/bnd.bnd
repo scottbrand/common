@@ -1,0 +1,15 @@
+Bundle-Version: 0.0.1.${tstamp}
+
+-buildpath: osgi-compile
+Export-Package: \
+	io.github.scottbrand.common,\
+	io.github.scottbrand.common.crypto,\
+	io.github.scottbrand.common.db,\
+	io.github.scottbrand.common.db.jpa,\
+	io.github.scottbrand.common.l10n,\
+	io.github.scottbrand.common.ldap,\
+	io.github.scottbrand.common.logging,\
+	io.github.scottbrand.common.mail,\
+	io.github.scottbrand.common.security,\
+	io.github.scottbrand.common.sed,\
+	io.github.scottbrand.common.tuple
