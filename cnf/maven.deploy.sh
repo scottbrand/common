@@ -1,0 +1,1 @@
+./mvn deploy:deploy-file -DgroupId=org.eclipse.gemini -DartifactId=org.eclipse.gemini.jpa -Dversion=1.2.0 -Dpackaging=jar  -Dfile=$HOME/Downloads/org.eclipse.gemini.jpa-1.2.0.jar -DrepositoryId=http://localhost:8081 -Durl=http://localhost:8081/repository/maven-releases/ --settings=$HOME/git/common/cnf/settings.txt -X

@@ -1,16 +1,55 @@
 javac.source: 			1.8
 javac.target: 			1.8
 
-
+remote-repo: https://scottbrand.github.io
+local-repo: file:///home/scott
 
 # Configure Repositories
 
        
--plugin: \
-	aQute.lib.deployer.FileRepo;readonly=true;name=Libs;location=${workspace}/cnf/libs,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=felix;locations=file:///home/scott/repos/felix/index.xml.gz,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-osgi;locations=file:///home/scott/repos/base-osgi/index.xml.gz,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-depends;locations=file:///home/scott/repos/base-depends/index.xml.gz,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=webservices;locations=file:///home/scott/repos/webservices/index.xml.gz
+-plugin.0.Primary: \
+	aQute.lib.deployer.FileRepo;readonly=true;name=Libs;location=${workspace}/cnf/libs
 	
+#	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-depends;locations=${remote-repo}/repos/base-depends/index.xml.gz
+#	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=webservices;locations=${remote-repo}/repos/webservices/index.xml.gz
+#	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=felix;locations=${remote-repo}/repos/felix/index.xml.gz,\
+#	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-osgi;locations=${remote-repo}/repos/base-osgi/index.xml.gz,\  
+
+
+
 	
+-plugin.3.Central = \
+    aQute.bnd.deployer.repository.wrapper.Plugin; \
+        location  = "${.}/cache/wrapper"; \
+        reindex   = true, \
+   aQute.bnd.repository.maven.provider.MavenBndRepository; \
+      releaseUrl = https://repo.maven.apache.org/maven2/; \
+      name       = Central
+	
+-plugin.4.Neustar = \
+	        aQute.bnd.repository.maven.provider.MavenBndRepository; \
+				releaseUrl			=	http://localhost:8081/repository/maven-releases/ ; \
+				snapshoUrl			=	http://localhost:8081/repository/maven-snapshots/ ; \
+				name				=	Neustar
+
+
+-plugin.6.Local: \
+	\
+       		aQute.bnd.repository.maven.provider.MavenBndRepository; \
+				name				=	Local
+
+
+-plugin.9.Release: \
+	\
+       		aQute.bnd.repository.maven.provider.MavenBndRepository; \
+	        	releaseUrl			=   http://localhost:8081/repository/maven-releases/ ; \
+	        	snapshotUrl			=   http://localhost:8081/repository/maven-snapshots/ ; \
+	        	index=${.}/release.maven; \
+				name				=	Release
+
+
+-connection-settings 	${.}/settings.txt
+-buildrepo: 			Local
+-releaserepo			Release
+-pom: 					groupid	=	io.github.scottbrand,\
+						version =	${versionmask;===;${@version}}-SNAPSHOT

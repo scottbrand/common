@@ -1,6 +1,8 @@
 Bundle-Version: 0.0.1.${tstamp}
 
--buildpath: osgi-compile
+-buildpath: \
+	osgi-compile,\
+	osgi
 Export-Package: \
 	io.github.scottbrand.common,\
 	io.github.scottbrand.common.crypto,\
