@@ -1,0 +1,33 @@
+-runfw: org.apache.felix.framework;version='[5.6.2,5.6.2]'
+-runee: JavaSE-1.8
+
+-runvm: \
+	-Djava.io.tmpdir=tmp, \
+	-Dorg.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.StdErrLog
+	
+	
+-runproperties: \
+	launch.trace=false,\
+	felix.fileinstall.dir=etc,\
+	felix.fileinstall.tmpdir=tmp,\
+	felix.fileinstall.noInitialDelay=true,\
+	osgi.requiredJavaVersion=1.8,\
+	org.osgi.service.http.port=3001
+	
+#-runrequires: osgi.identity;filter:='(osgi.identity=io.github.scottbrand.common)'
+
+-runbundles: \
+	osgi-run,\
+	felix-run,\
+	felix-http,\
+	jersey-ws,\
+	io.github.scottbrand.common;version=latest,\
+	io.github.scottbrand.webservice.consumer;version=latest,\
+	io.github.scottbrand.webservice.jwt;version=latest,\
+	io.github.scottbrand.webservice.multipart;version=latest,\
+	io.github.scottbrand.webservice.publisher;version=latest,\
+	io.github.scottbrand.webservice.security;version=latest,\
+	io.github.scottbrand.webservice.sse;version=latest,\
+	test.io.github.scottbrand.webservice;version=latest,\
+	io.github.scottbrand.common.provider.logging;version=latest,\
+	io.github.scottbrand.common.provider.security;version=latest

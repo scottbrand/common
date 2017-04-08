@@ -1,0 +1,9 @@
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8
+-runbundles: \
+	felix-run;version=5.0.0,\
+	org.pegdown;version=1.5.0,\
+	com.experian.gpd.test.maintest;version=latest,\
+	org.objectweb.asm.all,\
+	com.experian.gpd;version=latest,\
+	osgi-run

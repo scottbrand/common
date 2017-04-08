@@ -1,0 +1,7 @@
+Bundle-Version: 0.0.1.${tstamp}
+Private-Package: test.io.github.scottbrand.common.l10n
+	
+	
+	
+-includeresource: \
+    OSGI-INF/l10n=l10n/forTest	

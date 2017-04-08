@@ -1,0 +1,16 @@
+Bundle-Version: 0.0.1.${tstamp}
+-buildpath: \
+	osgi-compile,\
+	io.github.scottbrand.common;version=latest,\
+	io.github.scottbrand.webservice.consumer;version=latest,\
+	io.github.scottbrand.webservice.jwt;version=latest,\
+	io.github.scottbrand.webservice.multipart;version=latest,\
+	io.github.scottbrand.webservice.publisher;version=latest,\
+	io.github.scottbrand.webservice.security;version=latest,\
+	io.github.scottbrand.webservice.sse;version=latest,\
+	jersey-ws,\
+	felix-http
+	
+-includeresource: \
+	static=static	
+Private-Package: test.io.github.scottbrand.webservice

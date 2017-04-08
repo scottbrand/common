@@ -1,0 +1,51 @@
+ID	TIT	INI	VNM	VVG	ANM	SEXE	GEBJR	GEBDATUM	TEL	MOB	STR	HNR	TVG	PKD	WPL	ADRESID	EMAIL	DCHECK	nategis	Nategis_Verrijk	cddn_telint	cddn_mobint	cddn_sexe	cddn_gebjr	cddn_verhuis	cddn_verhuis_dcheck	vh_str	vh_hnr	vh_tvg	vh_pkd	vh_wpl
+3351149		N.			Bokhoven	V	0	19621112	0	0	Van Riebeekstraat	36		2987AV	RIDDERKERK			20140801	 A     		0	0				0					
+33511490		E. M.			Roozenburg	V	0	0	703210322	0	Wolweversgaarde	667		2542BD	'S GRAVENHAGE			20140801	NAT  IS	NAT  IS	0	0		1958		0					
+33511491		H. L.			Kouwenhoven	M	0	19381106	703212380	0	Wolweversgaarde	687		2542BD	'S-GRAVENHAGE			0			0	0			NA	20040119	Promenade	148		2711AT	ZOETERMEER
+33511519		I.			el Haddioui	M	0	19791126	0	0	Droogscheerdersgaarde	38		2542BK	'S GRAVENHAGE			0			0	0				0					
+3351152		M. T.			Roelofs	V	0	19601101	0	646584770	Van Riebeekstraat	40		2987AV	RIDDERKERK			20121221	NA  GIS		0	0				0					
+33511520		D.			Huiskens	V	0	19821106	0	0	Droogscheerdersgaarde	38		2542BK	'S GRAVENHAGE			0			0	0				0					
+33511521		K.			Bahida	V	0	19810607	0	0	Droogscheerdersgaarde	3		2542BK	'S GRAVENHAGE			0			0	0				0					
+33511522		M.			Douairi	M	0	19760911	0	0	Droogscheerdersgaarde	3		2542BK	'S GRAVENHAGE			0			0	0				0					
+33511523		X. N.			Archangel	V	0	19760904	0	645090896	Droogscheerdersgaarde	51		2542BK	'S GRAVENHAGE			20130401	NA   IS		0	0				0					
+33511524		S.			Celik	V	0	19880809	0	0	Droogscheerdersgaarde	5		2542BK	'S GRAVENHAGE			0			0	0				0					
+33511525		B.			Tolu	V	0	19830108	0	0	Droogscheerdersgaarde	7		2542BK	'S GRAVENHAGE			0			0	0				0					
+33511526		N. P. O.			Nuytermans	M	0	19481128	703662249	0	De Gaarde	19		2542CB	'S GRAVENHAGE			20140301	NAT GIS		0	0				0					
+33511527		K.		v.d.	Berg	M	0	19601219	703364847	0	De Gaarde	55		2542CB	'S-GRAVENHAGE			0	 AT    		0	0				0					
+33511528		S. R.			Jankipersadsing	V	0	19841207	0	613960232	De Gaarde	49		2542CB	'S GRAVENHAGE			20140301	NA  GIS		0	0				0					
+33511529		S.			Somersall	O	0	19840529	0	0	De Gaarde	55		2542CB	'S GRAVENHAGE			20130802	 A     		0	0				0					
+3351153		J. H.			Wijnveldt	M	0	19230717	180416793	657590284	Van Riebeekstraat	42		2987AV	RIDDERKERK			20140301	NAT GIS		0	0				0					
+33511530		J. S.			Tremus	V	0	19850714	0	653143954	De Gaarde	75		2542CC	'S GRAVENHAGE			20120724	NA  GIS		0	0				0					
+33511531		N. H.			Emden	V	0	0	0	0	De Gaarde	77		2542CC	'S GRAVENHAGE			20140219	 A     		0	0				0					
+33511532		T.			Stoof	V	0	0	703211818	0	De Gaarde	81		2542CC	'S GRAVENHAGE			20140801	 A     		0	0				0					
+33511533		J.			Boutahri	V	0	0	703667152	0	De Gaarde	87		2542CC	'S GRAVENHAGE			20140801	NAT  IS		0	0				0					
+33511534		D. A. P.			Roos	O	0	0	702110395	0	De Gaarde	93		2542CC	'S GRAVENHAGE			20140717	 A     		0	0				0					
+33511535		Y.			Fang	V	0	19650308	703050336	0	Binckhorstlaan	36		2516BE	'S-GRAVENHAGE			20130114	NA  GI 		0	0				0					
+33511536		J. A.			Haas	O	0	0	703296767	0	De Gaarde	97		2542CC	'S GRAVENHAGE			20140515	NAT  I 	NAT  I	0	0		1938		0					
+33511537		M. M. M.			Krook	V	0	0	703295932	0	De Gaarde	99		2542CC	'S GRAVENHAGE			20140801	 A     		0	0				0					
+33511538		T. V.		de	Rue	V	0	0	703211076	0	De Gaarde	101		2542CD	'S GRAVENHAGE			20140301	 A     		0	0				0					
+33511539		A. J. H.		de	Vrueh	O	0	0	703678256	0	De Gaarde	103		2542CD	'S GRAVENHAGE			20140717	NAT  I 	NAT  I	0	0	M	1943		0					
+3351154		D. B.			Hartkoorn	M	0	19291025	180414345	0	Van Riebeekstraat	44		2987AV	RIDDERKERK			20140801	NAT GIS		0	0				0					
+33511540		A.		el	Harchi	O	0	0	702124616	0	De Gaarde	107		2542CD	'S GRAVENHAGE			20081001	 A     		0	0				0					
+33511541		Y.			Cheung	O	0	0	703808250	0	De Gaarde	115		2542CD	'S GRAVENHAGE			20140301	NAT  I 		0	0			N T	19990519	Staverdenstraat	50		2573DE	'S-GRAVENHAGE
+33511542		C.			Bakir	V	0	0	0	0	De Gaarde	133		2542CD	'S GRAVENHAGE			20120407	 A     		0	0				0					
+33511543		S.			Rangai	V	0	0	703291335	0	De Gaarde	133		2542CD	'S GRAVENHAGE			20120407	 A     		0	0				0					
+33511544		N. I.			Eg	V	0	0	0	641320716	De Gaarde	147		2542CE	'S GRAVENHAGE			20090101	NA     		0	0				0					
+33511545		H. G.			Andranik	O	0	19861128	0	0	De Gaarde	149		2542CE	'S GRAVENHAGE			20120917	 A  G  		0	0				0					
+33511546		P. G.			Niemeyer	M	0	19361116	0	653214491	De Gaarde	157		2542CE	'S GRAVENHAGE			0	NA   IS		0	0				0					
+33511547		R.			Kromoprajitno	V	0	0	0	0	De Gaarde	161		2542CE	'S GRAVENHAGE			20101126	NA   IS		0	0				0					
+33511548		H.			Sewtahal	O	0	0	702116864	0	De Gaarde	169		2542CE	'S GRAVENHAGE			0	NA     		0	0				0					
+33511578		R. M. D.			Kwidama	V	0	0	0	618039123	De Gaarde	84		2542CK	'S-GRAVENHAGE			20101231	NA   IS		0	0				0					
+33511579		W. T.			Evers	O	0	0	0	0	De Gaarde	48		2542CK	'S GRAVENHAGE			20020603	NA   I 		0	0				0					
+3351158		C.			Assenberg	V	0	19750821	0	0	Van Riebeekstraat	8		2987AV	RIDDERKERK			20140319	NA  GI 		0	0				0					
+33511580		M.			Omerov	O	0	0	0	652883739	De Gaarde	52		2542CK	'S GRAVENHAGE			0			0	0				0					
+33511581		U.			Ramessersing	O	0	0	0	0	De Gaarde	62		2542CK	'S GRAVENHAGE			20110608	 A     		0	0				0					
+33511582		E. D.			Renita	M	0	19600803	0	613275194	De Gaarde	66		2542CK	'S GRAVENHAGE			20090810	NA  GIS		0	0				0					
+33511583		R. D.			Albertsz	O	0	19780120	0	0	De Gaarde	76		2542CK	'S GRAVENHAGE			20100916	 A     		0	0				0					
+33511584		D. J.		v.d.	Arend	O	0	0	707520255	0	De Gaarde	78		2542CK	'S GRAVENHAGE			19850801	 A     		0	0				0					
+33511585		A. I.			Buda	V	0	19851001	0	0	De Gaarde	84		2542CK	'S GRAVENHAGE			20101231	 A     		0	0				0					
+33511586		D.			Krzysztof Wladyslaw	O	0	19850327	0	0	De Gaarde	84		2542CK	'S GRAVENHAGE			20101231	 A     		0	0				0					
+33511587		O.			Yalcin	O	0	0	707071401	0	De Gaarde	92		2542CK	'S GRAVENHAGE			0	NA   I 		0	0				0					
+33511588		J. L. M.			Ak	V	0	19890821	0	0	De Gaarde	100		2542CL	'S GRAVENHAGE			20140116	 A     		0	0				0					
+33511589		H. L. J.			Kipp	O	0	0	703210626	0	De Gaarde	104		2542CL	'S GRAVENHAGE			20140128	NAT    		0	0				0					
+

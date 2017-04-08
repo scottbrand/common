@@ -1,0 +1,16 @@
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8
+
+#-runtrace: true
+
+-runbundles:  \
+	com.experian.gpd;version=latest,\
+	com.experian.gpd.test.jpa;version=latest,\
+	com.experian.gpd.test.postgres;version=latest,\
+	felix-run,\
+	gpd-depends,\
+	jpa,\
+	com.experian.gpd.provider.logging;version=latest,\
+	osgi-run;version=6.0.0,\
+	postgres,\
+	com.experian.gpd.provider.security;version=latest

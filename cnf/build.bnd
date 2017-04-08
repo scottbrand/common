@@ -1,16 +1,19 @@
 javac.source: 			1.8
 javac.target: 			1.8
 
+local-repo: file://${env;HOME}/repos
+remote-repo: https://scottbrand.github.io/repos
 
+sources: true
 
 # Configure Repositories
 
        
 -plugin: \
 	aQute.lib.deployer.FileRepo;readonly=true;name=Libs;location=${workspace}/cnf/libs,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=felix;locations=file:///home/scott/repos/felix/index.xml.gz,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-osgi;locations=file:///home/scott/repos/base-osgi/index.xml.gz,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-depends;locations=file:///home/scott/repos/base-depends/index.xml.gz,\
-	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=webservices;locations=file:///home/scott/repos/webservices/index.xml.gz
-	
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=felix;locations=${local-repo}/felix/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-osgi;locations=${local-repo}/base-osgi/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=base-depends;locations=${remote-repo}/base-depends/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=webservices;locations=${remote-repo}/webservices/index.xml.gz,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo;readonly=false;name=jpa;locations=${remote-repo}/jpa/index.xml.gz
 	

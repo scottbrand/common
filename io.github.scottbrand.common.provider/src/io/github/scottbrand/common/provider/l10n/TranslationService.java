@@ -42,7 +42,7 @@ import io.github.scottbrand.common.provider.l10n.TranslationService.Config;
  * @author Scott
  *
  */
-@Component(configurationPolicy=ConfigurationPolicy.REQUIRE)
+@Component(configurationPolicy=ConfigurationPolicy.OPTIONAL)
 @Designate(ocd = Config.class)
 public class TranslationService implements ITranslationService
 {

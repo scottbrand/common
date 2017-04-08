@@ -1,0 +1,2 @@
+Bundle-Version: 0.0.1.${tstamp}
+Private-Package: test.io.github.scottbrand.common.cloner

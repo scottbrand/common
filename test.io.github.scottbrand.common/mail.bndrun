@@ -1,0 +1,21 @@
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8
+
+
+-runvm: \
+	-Djava.io.tmpdir=tmp,\
+	-Dorg.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.StdErrLog,\
+    "-Dfelix.fileinstall.dir=etc",\
+	"-Dfelix.fileinstall.tmpdir=tmp",\
+	"-Dfelix.fileinstall.noInitialDelay=true",\
+	 -Dosgi.requiredJavaVersion=1.8,\
+	-Xms256m,\
+	-Xmx1024m
+	
+	
+-runbundles: \
+	felix-run,\
+	osgi-run,\
+	com.experian.gpd;version=latest,\
+	com.experian.gpd.provider.mail;version=latest,\
+	com.experian.gpd.test.mail;version=latest

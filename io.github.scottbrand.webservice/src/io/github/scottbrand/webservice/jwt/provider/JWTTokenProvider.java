@@ -1,6 +1,7 @@
 package io.github.scottbrand.webservice.jwt.provider;
 
 import java.security.Key;
+import java.util.Base64;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -58,7 +59,6 @@ public class JWTTokenProvider implements ITokenAuthenticator
      * Config object supplied via ConfigAdmin service
      */
     private Config                        config;
-
 
 
 
@@ -121,6 +121,8 @@ public class JWTTokenProvider implements ITokenAuthenticator
                     .setVerificationKey(key)
                     .setRelaxVerificationKeyValidation()
                     .build();
+            
+            ServiceLocator.getLogger().debug("JWT SigningKey: {}", Base64.getEncoder().encodeToString(key.getEncoded()));
 
         }
         catch (Throwable t)

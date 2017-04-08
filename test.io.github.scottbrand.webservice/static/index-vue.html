@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Resources</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.2.1/vue-resource.min.js"></script>
+
+  </head>
+  <body>
+    <div id="app">
+  		{{ message }}
+	</div> 
+	
+	<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+  
+  
+  <div class="col-sm-4 col-sm-offset-4">
+    <h2>Log In</h2>
+    <p>Log in to your account to get some great quotes.</p>
+    <div class="form-group">
+    	<input class="form-control"  placeholder="Enter your username" v-model="credentials.username">
+    	<input class="form-control"  placeholder="Enter your password" v-model="credentials.password">
+    </div>
+    <div class="form-group">
+    </div>
+    <button class="btn btn-primary" v-on:click="submit">Access</button>
+   </div>
+</div>
+   
+</body>
+<script>
+function showError(err)
+{
+	window.alert("show error is: " + err);
+}
+
+
+  var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!',
+    credentials: {
+        username: '',
+        password: ''
+      }
+  },
+  methods: {
+  	showError: function(err)
+  	{
+  		window.alert("vue app5 show error is: " + err);
+  	},
+    reverseMessage: function () 
+    {
+      this.message = this.message.split('').reverse().join('')
+      this.$http.get('http://localhost:3001/ws/services/motd').then(response => 
+      {
+	    return response.text();
+	  }).then(text => 
+	  	{
+    		window.alert("text is: " + text);
+  		});
+    },  // end of reverseMessage
+    submit: function() 
+    {
+    	window.alert("Submit");
+      	var credentials = {
+        	username: this.credentials.username,
+        	password: this.credentials.password,
+        	userID: 123,
+        	loginDate: new Date("October 13, 2014 11:13:00"),
+        	moreData : { id : Date.now(),
+        			 header : this.credentials.username.split("").reverse().join("")
+        		   }
+ 
+      	};
+      	alert("Credentails: " + credentials.username + "\n" + credentials.password + "\n" + credentials.moreData.header);
+      	this.$http.post('http://localhost:3001/ws/services/motd/login',JSON.stringify(credentials)).then(response =>
+      	{
+      		return response.text();
+      	}).then(text =>
+      		{
+      			window.alert("text is: " + text);
+      			var data = JSON.parse(text);
+      			window.alert("data is: " + data);
+      			window.alert("data.id_token: " + data.id_token);
+      			localStorage.setItem('id_token', data.id_token)
+      		},error => 
+      			{
+      				this.showError(error);
+      				//window.alert("error is: " + error);
+      			} 
+      		);
+    }   // end of submit method
+  } // end of methods
+})  // end of vue-5
+
+
+
+
+Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token');
+</script>
+</html>

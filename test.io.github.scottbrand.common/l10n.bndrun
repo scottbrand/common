@@ -1,0 +1,8 @@
+-runfw: org.apache.felix.framework;version='[5.6.2,5.6.2]'
+-runee: JavaSE-1.8
+-runbundles: \
+	felix-run,\
+	osgi-run,\
+	io.github.scottbrand.common;version=latest,\
+	io.github.scottbrand.common.provider.l10n;version=latest,\
+	test.io.github.scottbrand.common.l10n;version=latest
