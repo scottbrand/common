@@ -1,12 +1,16 @@
 javac.source: 			1.8
 javac.target: 			1.8
 
+
 remote-repo: https://scottbrand.github.io
-local-repo: file:///home/scott
+local-repo: local-repo: file://${env;HOME}
+
+sources: true
+
 
 # Configure Repositories
 
-       
+
 -plugin.0.Primary: \
 	aQute.lib.deployer.FileRepo;readonly=true;name=Libs;location=${workspace}/cnf/libs
 	
@@ -53,3 +57,4 @@ local-repo: file:///home/scott
 -releaserepo			Release
 -pom: 					groupid	=	io.github.scottbrand,\
 						version =	${versionmask;===;${@version}}-SNAPSHOT
+

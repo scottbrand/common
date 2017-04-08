@@ -1,0 +1,8 @@
+-runbundles: \
+	com.experian.gpd;version=latest,\
+	com.experian.gpd.provider.security;version=latest,\
+	com.experian.gpd.test.property;version=latest,\
+	felix-run,\
+	osgi-run
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8

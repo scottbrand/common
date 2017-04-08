@@ -1,0 +1,9 @@
+Private-Package: test.io.github.scottbrand.common.jpa
+	
+
+-includeresource: \
+    META-INF/persistence.xml=jpa/persistence.xml
+
+Meta-Persistence: META-INF/persistence.xml 		
+Export-Package: test.io.github.scottbrand.common.jpa.domain
+Bundle-Version: 0.0.1.${tstamp}

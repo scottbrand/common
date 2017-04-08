@@ -93,7 +93,7 @@ public final class LogFactory implements ILoggerFactory
     public static final String   LEVEL_DEFAULT         = "DEBUG";
 
     public static final String   ADDITIVE              = ".additive";
-    public static final String   ADDITIVE_DEFAULT      = "false";
+    public static final String   ADDITIVE_DEFAULT      = "true";
 
     public static final String   LOGGER_FILE           = ".LF";
     public static final String   FILE_PATTERN          = ".FP";

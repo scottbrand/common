@@ -1,0 +1,27 @@
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8
+
+
+-runvm: \
+	-Djava.io.tmpdir=tmp,\
+	-Dorg.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.StdErrLog,\
+    "-Dfelix.fileinstall.dir=etc",\
+	"-Dfelix.fileinstall.tmpdir=tmp",\
+	"-Dfelix.fileinstall.noInitialDelay=true",\
+	 -Dosgi.requiredJavaVersion=1.8,\
+	-Xms256m,\
+	-Xmx1024m
+
+
+-runbundles:  \
+	felix-run,\
+	osgi-run,\
+	org.postgresql.jdbc4,\
+	com.ibm.db2.jcc,\
+	com.zaxxer.HikariCP,\
+	com.experian.gpd;version=latest,\
+	com.experian.gpd.provider.security;version=latest,\
+	com.experian.gpd.test.postgres;version=latest,\
+	com.experian.gpd.test.db2;version=latest
+
+	

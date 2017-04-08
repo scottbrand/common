@@ -1,0 +1,2 @@
+Private-Package: test.io.github.scottbrand.common.db.postgres
+Bundle-Version: 0.0.1.${tstamp}

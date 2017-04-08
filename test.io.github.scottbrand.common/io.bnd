@@ -1,0 +1,4 @@
+Private-Package: test.io.github.scottbrand.common.io
+	
+-includeresource:  files=files	
+Bundle-Version: 0.0.1.${tstamp}

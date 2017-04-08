@@ -1,0 +1,2 @@
+Private-Package: test.io.github.scottbrand.common.main
+Bundle-Version: 0.0.1.${tstamp}

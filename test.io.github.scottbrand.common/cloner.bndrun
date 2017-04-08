@@ -1,0 +1,7 @@
+-runbundles: \
+	test.io.github.scottbrand.common.cloner;version=latest,\
+	io.github.scottbrand.common;version=latest,\
+	felix-run,\
+	osgi-run
+-runfw: org.apache.felix.framework;version='[5.6.2,5.6.2]'
+-runee: JavaSE-1.8
