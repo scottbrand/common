@@ -1,2 +1,1 @@
-Bundle-Version: 1.0.0.${tstamp}
 Private-Package: io.github.scottbrand.webservice.jaxrs.sse.provider

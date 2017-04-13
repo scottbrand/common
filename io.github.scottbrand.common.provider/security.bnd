@@ -1,2 +1,1 @@
-Bundle-Version: 0.0.1.${tstamp}
 Private-Package: io.github.scottbrand.common.provider.security

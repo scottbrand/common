@@ -1,4 +1,4 @@
--runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runfw: org.apache.felix.framework;version='[5.6.2,5.6.2]'
 -runee: JavaSE-1.8
 
 
@@ -15,9 +15,9 @@
 -runbundles: \
 	felix-run,\
 	osgi-run,\
-	com.experian.gpd;version=latest,\
-	com.experian.gpd.provider.security;version=latest,\
-	com.experian.gpd.provider.ldap;version=latest,\
-	com.experian.gpd.test.ldap;version=latest
+	io.github.scottbrand.common;version=latest,\
+	io.github.scottbrand.common.provider.ldap;version=latest,\
+	io.github.scottbrand.common.provider.security;version=latest,\
+	test.io.github.scottbrand.common.ldap;version=latest
 
 

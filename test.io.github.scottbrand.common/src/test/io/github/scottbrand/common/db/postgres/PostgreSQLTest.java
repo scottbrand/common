@@ -2,10 +2,12 @@ package test.io.github.scottbrand.common.db.postgres;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
 import javax.sql.DataSource;
 
+import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -22,7 +24,7 @@ public class PostgreSQLTest
 	
 	
 	@Activate
-	public void activate()
+	public void activate(BundleContext ctx)
 	{
 		testPostGres();
 		//System.exit(0);
@@ -52,10 +54,13 @@ public class PostgreSQLTest
 			s.close();
 			
 			s = c.createStatement();
-			rs = s.executeQuery("SELECT * FROM PLATFORM");
+			rs = s.executeQuery("SELECT * FROM USERS");
+			ResultSetMetaData rsmd = rs.getMetaData();
+			int cc = rsmd.getColumnCount();
 			while (rs.next())
-			    ServiceLocator.getLogger().debug("ID: " + rs.getInt(1) + " VERSION: "  + rs.getInt(2) + " NAME: " + 
-			                      rs.getString(3) +  " CREATED BY: " + rs.getInt(4) + " UPDATED: " + rs.getTimestamp(5));
+			{	for (int i = 1; i <= cc; i++)
+					ServiceLocator.getLogger().debug("column: {} = {}",i,rs.getString(i));
+			}
 			rs.close();
 			s.close();			
 			c.close();

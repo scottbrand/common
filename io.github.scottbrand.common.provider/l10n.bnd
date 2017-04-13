@@ -1,4 +1,3 @@
-Bundle-Version: 0.0.1.${tstamp}
 Bundle-ActivationPolicy: lazy
 Private-Package: io.github.scottbrand.common.provider.l10n
 -dsannotations:  \

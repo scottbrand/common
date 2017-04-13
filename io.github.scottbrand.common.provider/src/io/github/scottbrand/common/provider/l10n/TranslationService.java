@@ -16,6 +16,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
@@ -42,10 +43,12 @@ import io.github.scottbrand.common.provider.l10n.TranslationService.Config;
  * @author Scott
  *
  */
-@Component(configurationPolicy=ConfigurationPolicy.OPTIONAL)
+@Component(name=TranslationService.PID, configurationPolicy=ConfigurationPolicy.REQUIRE)
 @Designate(ocd = Config.class)
 public class TranslationService implements ITranslationService
 {
+
+	public static final String PID = "io.github.scottbrand.common.provider.l10n";
 	
 	static final String MUST_HAVE_ENTRY = "/OSGI-INF/l10n/bundle.properties";
 
@@ -54,7 +57,10 @@ public class TranslationService implements ITranslationService
     @interface Config
     {
         @AttributeDefinition(name="package prefix", required=true, description="Comma Separate List of Package Prefixes to scan for bundle.properties")
-        String package_prefix() default "io.github";
+        String packagePrefix();
+        
+        @AttributeDefinition(name="foo",required=true, description="bar")
+        String foo();
     }
 	
 	private TranslationBundleTracker		bundleTracker;
@@ -90,10 +96,18 @@ public class TranslationService implements ITranslationService
 	public void activate(BundleContext ctx, Config config)
 	{
 		int trackStates = Bundle.STARTING | Bundle.STOPPING | Bundle.RESOLVED | Bundle.INSTALLED | Bundle.UNINSTALLED | Bundle.ACTIVE;
-		bundleTracker = new TranslationBundleTracker(ctx, trackStates, null, this,config.package_prefix());
+		bundleTracker = new TranslationBundleTracker(ctx, trackStates, null, this,config.packagePrefix());
 		bundleTracker.open();
 	}
 	
+	
+	@Modified
+	public void update(BundleContext ctx, Config config)
+	{
+		int trackStates = Bundle.STARTING | Bundle.STOPPING | Bundle.RESOLVED | Bundle.INSTALLED | Bundle.UNINSTALLED | Bundle.ACTIVE;
+		bundleTracker = new TranslationBundleTracker(ctx, trackStates, null, this,config.packagePrefix());
+		bundleTracker.open();
+	}
 	
 	
 	

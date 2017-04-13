@@ -1,11 +1,24 @@
--runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runfw: org.apache.felix.framework;version='[5.6.2,5.6.2]'
 -runee: JavaSE-1.8
+
+-runvm: \
+	-Xms256m,\
+	-Xmx1024m,\
+	-Djava.io.tmpdir=tmp,\
+	-Dorg.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.StdErrLog,\
+    "-Dfelix.fileinstall.dir=etc",\
+	"-Dfelix.fileinstall.tmpdir=tmp",\
+	"-Dfelix.fileinstall.noInitialDelay=true",\
+	 -Dosgi.requiredJavaVersion=1.8
+
+
+
 -runbundles: \
-	com.experian.gpd.test.postgres;version=latest,\
-	com.experian.gpd.provider.logging;version=latest,\
-	com.experian.gpd.provider.security;version=latest,\
 	felix-run,\
-	gpd-depends,\
-	com.experian.gpd;version=latest,\
-	postgres,\
-	osgi-run
+	osgi-run,\
+	org.postgresql.jdbc4;version=9.4.0.build-1204,\
+	base-depends,\
+	io.github.scottbrand.common;version=latest,\
+	io.github.scottbrand.common.provider.logging;version=latest,\
+	io.github.scottbrand.common.provider.security;version=latest,\
+	test.io.github.scottbrand.common.postgres;version=latest

@@ -8,19 +8,19 @@ import javax.persistence.TypedQuery;
 
 import org.osgi.service.component.annotations.Component;
 
-import test.io.github.scottbrand.common.jpa.domain.Platform;
+import test.io.github.scottbrand.common.jpa.domain.User;
 
 @Component
-public class PlatformService implements IPlatformService
+public class UsersService implements IUsersService
 {
-	@PersistenceContext(unitName="GBP_MetaData")
+	@PersistenceContext(unitName="TEST_MetaData")
 	protected EntityManager em;
 	
 	@Override
-	public List<Platform> getPlatforms()
+	public List<User> getUsers()
 	{
-		 TypedQuery<Platform> q = em.createQuery("Select p from Platform p", Platform.class);
-	     List<Platform> results = q.getResultList();
+		 TypedQuery<User> q = em.createQuery("Select u from User u", User.class);
+	     List<User> results = q.getResultList();
 	     return results;
 	}
 

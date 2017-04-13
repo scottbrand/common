@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>IIS Windows</title>
+<script src="https://asscvdvvfram01.va.neustar.com:8443/ximloader/jquery.min.js">
+</script>
+<script src="https://asscvdvvfram01.va.neustar.com:8443/ximloader/ximloader.js">
+</script>
+<link rel="stylesheet" href="https://asscvdvvfram01.va.neustar.com:8443/ximloader/ximloader.css" />
+</head>
+<body>
+<script>
+function auth_done(authid){
+   document.getElementById("content").innerHTML = authid;
+}
+function auth_cancel(){
+   document.getElementById("content").innerHTML = "canceled";
+}
+</script>
+<button onclick="ximLogin('/oauth/start', null, auth_done,auth_cancel)">Login</button>
+<div id="content">
+</div>
+</body>
+</html>

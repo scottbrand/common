@@ -1,3 +1,2 @@
-Bundle-Version: 1.0.0.${tstamp}
 Private-Package: io.github.scottbrand.webservice.jaxrs.security.provider
 Export-Package: io.github.scottbrand.webservice.jaxrs.security

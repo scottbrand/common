@@ -1,2 +1,4 @@
 2017-03-22 22:11:34,221 [main] DEBUG this goes to the job-2 logger
 2017-03-22 22:11:34,221 [main] DEBUG this goes to the job-1 logger and it is closing
+2017-04-08 16:15:16,106 [main] DEBUG this goes to the job-2 logger
+2017-04-08 16:15:16,106 [main] DEBUG this goes to the job-1 logger and it is closing

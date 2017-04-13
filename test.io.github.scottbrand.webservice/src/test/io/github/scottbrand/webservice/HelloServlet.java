@@ -85,6 +85,7 @@ public class HelloServlet extends HttpServlet
 
 		//Files.copy(Paths.get("static", "index.html"), res.getOutputStream());
 		Files.copy(Paths.get("static", "index-vue.html"), res.getOutputStream());
+		//Files.copy(Paths.get("static", "auth.html"), res.getOutputStream());
 		// out.println("Request = " + req);
 		// out.println("PathInfo = " + req.getPathInfo());
 	}

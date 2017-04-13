@@ -1,7 +1,9 @@
 package test.io.github.scottbrand.common.db.postgres;
 
+import java.util.Arrays;
 import java.util.Map;
 
+import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -19,11 +21,14 @@ property={"ds.name=ds/postgres","service.ranking:Integer=100"},configurationPoli
 public class PostgresSQLDS extends BaseDataSource implements javax.sql.DataSource, IDataSource
 {
    
-    public static final String PID = "com.experian.gpd.db.postgres";
+    public static final String PID = "io.github.scottbrand.common.db.postgres";
 	
 	@Activate
-	protected void activate(Map<String, Object> map) 
+	protected void activate(BundleContext ctx, Map<String, Object> map) 
 	{
+		Arrays.stream(ctx.getBundles()).forEach(b -> System.out.println(b.getSymbolicName() + "\t" + b.getState()));
+		
+		
 		HikariConfig config = new HikariConfig(getProperties(map));
 		HikariDataSource ds = new HikariDataSource(config);
 		this.setInternalSoruce(ds);
@@ -61,6 +66,6 @@ public class PostgresSQLDS extends BaseDataSource implements javax.sql.DataSourc
     @Override
     public String getName()
     {
-        return "100% Sample on " + this.productName + ";Version=" + this.productVersion;
+        return "Sample on " + this.productName + ";Version=" + this.productVersion;
     }
 }

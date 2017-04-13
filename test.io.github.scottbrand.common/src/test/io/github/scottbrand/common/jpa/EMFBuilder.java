@@ -14,7 +14,7 @@ import io.github.scottbrand.common.ServiceLocator;
 import io.github.scottbrand.common.Strings;
 import io.github.scottbrand.common.db.jpa.AbstractEMFBuilder;
 import io.github.scottbrand.common.db.jpa.IPersistenceManager;
-import test.io.github.scottbrand.common.jpa.domain.Platform;
+import test.io.github.scottbrand.common.jpa.domain.User;
 
 @Component
 public class EMFBuilder extends AbstractEMFBuilder
@@ -23,7 +23,7 @@ public class EMFBuilder extends AbstractEMFBuilder
 	@Activate
 	public void activate(ComponentContext ctx)
 	{
-		Object o = onActivate(ctx.getBundleContext(),"GBP_MetaData",null);
+		Object o = onActivate(ctx.getBundleContext(),"TEST_MetaData",null);
 		if (o != null)
 			doTest();
 	}
@@ -42,7 +42,7 @@ public class EMFBuilder extends AbstractEMFBuilder
 
 
 	@Override
-	@Reference(target="(osgi.unit.name=GBP_MetaData)")
+	@Reference(target="(osgi.unit.name=TEST_MetaData)")
 	protected void setEntityManagerFactoryBuilder(EntityManagerFactoryBuilder emfb)
 	{
 		this.emfb = emfb;
@@ -58,11 +58,11 @@ public class EMFBuilder extends AbstractEMFBuilder
 			IPersistenceManager pm = ServiceLocator.getInstance().getService(IPersistenceManager.class);
 			if (pm != null)
 			{
-				IPlatformService ips = pm.getPersistenceService(IPlatformService.class);
-				List<Platform> platforms = ips.getPlatforms();
-				if (platforms != null)
-					for (Platform p : platforms)
-					    ServiceLocator.getLogger().debug(p.toString());
+				IUsersService ius = pm.getPersistenceService(IUsersService.class);
+				List<User> users = ius.getUsers();
+				if (users != null)
+					for (User u  : users)
+					    ServiceLocator.getLogger().debug(u.toString());
 			}
 		}
 		catch (Throwable t)

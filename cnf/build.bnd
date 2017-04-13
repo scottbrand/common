@@ -52,9 +52,23 @@ sources: true
 				name				=	Release
 
 
+Bundle-Version: 0.0.2.SNAPSHOT
+
+-snapshot: SNAPSHOT
+
 -connection-settings 	${.}/settings.txt
 -buildrepo: 			Local
 -releaserepo			Release
--pom: 					groupid	=	io.github.scottbrand,\
-						version =	${versionmask;===;${@version}}-SNAPSHOT
+-pom: 					groupid=io.github.scottbrand,\
+						version=0.0.2-SNAPSHOT
+
+
+#,\
+#						version=${versionmask;===s;${@version}}
+						
+						
+#						-SNAPSHOT
+						
+
+
 

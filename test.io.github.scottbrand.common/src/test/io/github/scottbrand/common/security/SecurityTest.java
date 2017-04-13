@@ -72,7 +72,7 @@ public class SecurityTest
         log.debug("portNumber=ENC({})",encryptor.encrypt("50000"));
         log.debug("databaseName=ENC({})",encryptor.encrypt("GVAPDDB1"));
         log.debug("user=ENC({})",encryptor.encrypt("gvapdb"));
-        log.debug("password=ENC({})",encryptor.encrypt("sNqT8345"));
+        log.debug("password=ENC({})",encryptor.encrypt("neustardbPassword"));
     }
 
 

@@ -1,3 +1,9 @@
-io.github.scottbrand:io.github.scottbrand.common:0.0.1-SNAPSHOT
-io.github.scottbrand:io.github.scottbrand.common.provider.jpa:0.0.1-SNAPSHOT
 org.eclipse.gemini:org.eclipse.gemini.jpa:1.2.0
+javax.servlet:javax.servlet:3.1.0
+javax.mail:javax.mail:1.4.1
+postgres:postgres:9.4.1204
+javax:persistence:2.1.0
+
+
+
+
