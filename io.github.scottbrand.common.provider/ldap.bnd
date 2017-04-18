@@ -1,2 +1,2 @@
 
-Private-Package: io.github.scottbrand.common.provider.ldap
+Export-Package: io.github.scottbrand.common.provider.ldap

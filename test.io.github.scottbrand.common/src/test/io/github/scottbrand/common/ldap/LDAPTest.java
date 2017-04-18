@@ -40,25 +40,29 @@ public class LDAPTest
 		if (reader != null)
 		{
 			TypedResult<Map<String,List<String>>> users = reader.findUsers("brand", "cn,sAMAccountName,mail");   //,distinguishedName");
+			if (users.isValid() == false)
+			{
+				users.getThrowable().printStackTrace();
+			}
 			log.info("findUsers returned: {}",users.getResult());
 		}
 		else
 			log.info("Reader was null");
 		
-		if (auth != null)
-		{
-		    BooleanResult br; 
-			if (( br = auth.authenticate("!baq15sb", "*")).getThrowable() != null)
-				log.error("bad login",br.getThrowable());
-			else 
-				log.info("Good login");
-			if (( br = auth.authenticate("albert", "enstein")).getResult() == false)
-				log.error("bad login");//,auth.getThrowable());
-			else 
-				log.info("Good login");			
-		}
-		else
-			log.info("auth was null");
+//		if (auth != null)
+//		{
+//		    BooleanResult br; 
+//			if (( br = auth.authenticate("!baq15sb", "*")).getThrowable() != null)
+//				log.error("bad login",br.getThrowable());
+//			else 
+//				log.info("Good login");
+//			if (( br = auth.authenticate("albert", "enstein")).getResult() == false)
+//				log.error("bad login");//,auth.getThrowable());
+//			else 
+//				log.info("Good login");			
+//		}
+//		else
+//			log.info("auth was null");
 
 	}
 	

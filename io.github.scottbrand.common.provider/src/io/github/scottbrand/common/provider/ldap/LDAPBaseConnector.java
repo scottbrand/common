@@ -15,6 +15,8 @@ import io.github.scottbrand.common.Strings;
 import io.github.scottbrand.common.TypedResult;
 import io.github.scottbrand.common.ldap.ILDAPConnector;
 
+
+
 public abstract class LDAPBaseConnector
 {
 	protected ILDAPConnector	connector;
@@ -40,7 +42,7 @@ public abstract class LDAPBaseConnector
 			Hashtable<String, String> env = createEnvironment(connector.getPrincipal(), connector.getPassword());
 
 			ctx = new InitialLdapContext(env, null);
-			
+
 			return BooleanResult.TRUE;
 		}
 		catch (Throwable t)
@@ -73,9 +75,18 @@ public abstract class LDAPBaseConnector
 		// env.put(Context.SECURITY_CREDENTIALS, connector.getPassword());
 		env.put(Context.SECURITY_PRINCIPAL, principal);
 		env.put(Context.SECURITY_CREDENTIALS, password);
+		// Specify SSL
+
+		env.put("java.naming.ldap.factory.socket", SSLSocketFactory.class.getName()); 
+		env.put(Context.SECURITY_PROTOCOL, "ssl");
 
 		return env;
 	}
+
+
+
+
+
 
 
 
@@ -116,7 +127,7 @@ public abstract class LDAPBaseConnector
 		}
 		catch (Exception e)
 		{
-		    ServiceLocator.getLogger().error(Strings.EXCEPTION,e);
+			ServiceLocator.getLogger().error(Strings.EXCEPTION, e);
 		}
 		finally
 		{
@@ -174,7 +185,7 @@ public abstract class LDAPBaseConnector
 		}
 		catch (Throwable t)
 		{
-		    return new TypedResult<NamingEnumeration<?>>(t);
+			return new TypedResult<NamingEnumeration<?>>(t);
 		}
 	}
 
@@ -213,5 +224,8 @@ public abstract class LDAPBaseConnector
 	{
 		return connector.getSurNameFilter(); // "(&(objectClass=*)(sn={0}*))"
 	}
+
+
+
 
 }

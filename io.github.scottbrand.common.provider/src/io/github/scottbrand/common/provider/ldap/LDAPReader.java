@@ -63,7 +63,7 @@ public class LDAPReader extends LDAPBaseConnector implements ILDAPReader
             Map<String,List<String>>          map  = new HashMap<String,List<String>>();
             
             if (tne.isValid() == false)
-                new TypedResult<Map<String,List<String>>>(tne.getThrowable());
+                return new TypedResult<Map<String,List<String>>>(tne.getThrowable());
 
             Set<String> selectAttributes = new HashSet<String>(Arrays.asList(attributes.split(",")));
             
